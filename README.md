@@ -2,4 +2,4 @@
 
 ## TODO
 
-* [] Add app icon
+* [ ] Add app icon
