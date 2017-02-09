@@ -82,6 +82,10 @@ ul {
   right: 16px;
   color: var(--main-grey);
 }
+.tweet .theaser-img {
+  width: 100%;
+  margin-top: 16px;
+}
 .tweet .tweet-text {
   padding: 16px;
   padding-bottom: 24px;

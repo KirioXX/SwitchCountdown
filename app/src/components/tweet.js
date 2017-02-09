@@ -16,6 +16,7 @@ Vue.component('tweet',{
         </div>
       </div>
     </div>
+    <img class="theaser-img" v-if="data.theaserImg" :src="data.theaserImg" alt="">
     <div class="tweet-text" v-html="data.text">
     </div>
   </li>`

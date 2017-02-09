@@ -3,4 +3,4 @@
 ## TODO
 
 * [ ] Add app icon
-* [ ] Add images to twitter feed
+* [x] Add images to twitter feed

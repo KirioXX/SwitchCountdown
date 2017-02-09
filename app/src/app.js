@@ -51,7 +51,7 @@ var app = new Vue({
       }, 60000);
     },
     fetchTwitterData: function() {
-      this.$http.get(apiRoot + 'q=%23nintendoswitch&lang=en&lang=de&result_type=popular',{
+      this.$http.get(apiRoot + 'q=%23nintendoswitch&tweet_mode=extended&lang=en&lang=de',{
         headers: {
           "Authorization": AuthToken
         }
@@ -64,8 +64,9 @@ var app = new Vue({
             "userScreenName": "@" + tweet.user.screen_name,
             "userName": tweet.user.name,
             "createAt": moment(new Date(tweet.created_at)).fromNow(),
-            "text": twitter.autoLink(twitter.htmlEscape(tweet.text))
-          }
+            "text": twitter.autoLink(twitter.htmlEscape(tweet.full_text)),
+            "theaserImg": tweet.entities.media ? tweet.entities.media[0].media_url : undefined 
+          };
           this.tweets.push(out);
         });
           
