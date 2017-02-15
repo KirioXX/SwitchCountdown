@@ -8,16 +8,13 @@ Vue.component('tweet',{
         <div class="user-name">
           {{data.userName}}
         </div>
-        <div class="sub-user-name">
-          {{data.userScreenName}}
-        </div>
+        <div class="sub-user-name" v-html="data.userScreenName"></div>
         <div class="date">
           {{data.createdAt}}
         </div>
       </div>
     </div>
     <img class="theaser-img" v-if="data.theaserImg" :src="data.theaserImg" alt="">
-    <div class="tweet-text" v-html="data.text">
-    </div>
+    <div class="tweet-text" v-html="data.text"></div>
   </li>`
 });

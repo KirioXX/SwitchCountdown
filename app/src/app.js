@@ -61,7 +61,7 @@ var app = new Vue({
         response.body.statuses.map(tweet => {
           var out = {
             "userImg": tweet.user.profile_image_url,
-            "userScreenName": "@" + tweet.user.screen_name,
+            "userScreenName": twitter.autoLink(twitter.htmlEscape("@" + tweet.user.screen_name)),
             "userName": tweet.user.name,
             "createAt": moment(new Date(tweet.created_at)).fromNow(),
             "text": twitter.autoLink(twitter.htmlEscape(tweet.full_text)),
